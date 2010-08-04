@@ -5,7 +5,7 @@ version = '0.1dev'
 
 setup(name='sixfeetup.customfolderalert',
       version=version,
-      description="is there evil in your site? This product will let you know.",
+      description="Is there evil in your site? This product will let you know.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
