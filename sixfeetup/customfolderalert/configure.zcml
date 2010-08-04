@@ -5,7 +5,8 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="sixfeetup.customfolderalert">
 
-  <five:registerPackage package="." initialize=".initialize" />
+  <include file="skins.zcml" />
+
 
   <genericsetup:registerProfile
       name="default"
