@@ -8,6 +8,7 @@
   <include file="skins.zcml" />
   <include package=".browser" />
 
+  <five:registerPackage package="." />
 
   <genericsetup:registerProfile
       name="default"
