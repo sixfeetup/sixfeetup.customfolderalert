@@ -6,6 +6,7 @@
     i18n_domain="sixfeetup.customfolderalert">
 
   <include file="skins.zcml" />
+  <include package=".browser" />
 
 
   <genericsetup:registerProfile

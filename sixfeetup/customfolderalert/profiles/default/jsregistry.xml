@@ -2,10 +2,9 @@
 <object name="portal_javascripts">
     <javascript cacheable="False" 
                 compression="safe" 
-                conditionalcomment=""
                 cookable="True" 
                 enabled="on" 
-                expression="python:portal.evilchecking()" 
+                expression="python:not portal.restrictedTraverse('alert_view').isAlertDisabled() and portal.evilchecking()" 
                 id="evilalert.js"
                 inline="True"/>
 </object>
