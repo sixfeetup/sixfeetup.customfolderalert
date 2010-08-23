@@ -1,8 +1,18 @@
 Changelog
 =========
 
+0.2 (2010-08-23)
+----------------
+- added a version.txt file so it is read by portal_quickinstaller,
+- updated setup.py to read this new version.txt file,
+- updated configure.zcml so the egg is considered as a package,
+- removed old code from init.py
+- added a view class so we can test if the alert has been disabled by an environment variable
+  [lucielejard]
+
+
 0.1 (2010-08-04)
--------------------
+----------------
 
 - Initial release
   [lucielejard]

@@ -30,17 +30,12 @@ recipe to manage your project, you can do this:
 
 * Add ``sixfeetup.customfolderalert`` to the list of eggs to install, e.g.:
 
-    [buildout]
+    [instance]
     ...
     eggs =
         ...
         sixfeetup.customfolderalert
-       
-* Tell the plone.recipe.zope2instance recipe to install a ZCML slug:
 
-    [instance]
-    recipe = plone.recipe.zope2instance
-    ...
     zcml =
         sixfeetup.customfolderalert
       
