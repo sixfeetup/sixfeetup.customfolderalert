@@ -1,7 +1,9 @@
 from setuptools import setup, find_packages
 import os
 
-version = open(os.path.join("sixfeetup", "customfolderalert", "version.txt")).read()
+version = open(os.path.join("sixfeetup",
+                            "customfolderalert",
+                            "version.txt")).read().strip()
 
 setup(name='sixfeetup.customfolderalert',
       version=version,
