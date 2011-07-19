@@ -8,10 +8,9 @@ class AlertView(BrowserView):
 
     def is_alert_disabled(self):
         """Is the custom folder alert disabled?"""
-        TRUISMS = ['yes', 'y', 'true', 'on']
-        DISABLED = os.environ.get("DISABLE_CUSTOMFOLDER_ALERT", None)
-
-        return DISABLED is not None and DISABLED.lower() in TRUISMS
+        truisms = ['yes', 'y', 'true', 'on']
+        disabled = os.environ.get("DISABLE_CUSTOMFOLDER_ALERT", None)
+        return disabled is not None and disabled.lower() in truisms
 
     def check_for_evil(self):
         """Check to see if any non filesystem directories have
