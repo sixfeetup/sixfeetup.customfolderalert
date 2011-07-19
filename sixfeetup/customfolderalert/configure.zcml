@@ -18,4 +18,12 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="sixfeetup.customfolderalert (uninstall)"
+      directory="profiles/uninstall"
+      description="Un-installs the sixfeetup.customfolderalert package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
 </configure>
