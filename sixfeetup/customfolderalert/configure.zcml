@@ -17,6 +17,5 @@
       description="Installs the sixfeetup.customfolderalert package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  <!-- -*- extra stuff goes here -*- -->
-  
+
 </configure>
