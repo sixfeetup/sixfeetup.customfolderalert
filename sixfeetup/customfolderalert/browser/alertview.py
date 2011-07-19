@@ -1,6 +1,7 @@
 import os
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
+from plone.memoize.view import memoize_contextless
 
 
 class AlertView(BrowserView):
@@ -12,10 +13,12 @@ class AlertView(BrowserView):
         disabled = os.environ.get("DISABLE_CUSTOMFOLDER_ALERT", None)
         return disabled is not None and disabled.lower() in truisms
 
+    @memoize_contextless
     def check_for_evil(self):
         """Check to see if any non filesystem directories have
         any items.
         """
+        items_found = 0
         skins_tool = getToolByName(self.context, 'portal_skins')
         # TODO: Verify that this works even when using something
         #       like themetweaker.themeswitcher
@@ -28,6 +31,7 @@ class AlertView(BrowserView):
                 continue
             # only return true if it's not a fs dir and has something in it
             zope_folder = folder.meta_type != 'Filesystem Directory View'
-            if zope_folder and folder.objectIds():
-                return True
-        return False
+            folder_contents = folder.objectIds()
+            if zope_folder and folder_contents:
+                items_found += len(folder_contents)
+        return items_found
