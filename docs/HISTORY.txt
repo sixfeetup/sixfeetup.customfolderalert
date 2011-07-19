@@ -1,6 +1,24 @@
 Changelog
 =========
 
+1.1 (2011-07-19)
+----------------
+
+- Added an uninstall profile so that this product can be cleanly removed
+  [clayton]
+- Report the number of items in the custom folder
+  [clayton]
+- Clean up the javascript a bit so it is more readable
+  [clayton]
+- Convert variable names to lowercase as they are not globals
+  [clayton]
+- Only alert on custom folder paths in the active skin
+  [clayton]
+- Move everything to the `alert_view` view class
+  [clayton]
+- Make sure the alert is always visible and does not take up any space
+  [clayton]
+
 1.0 (2011-02-15)
 ----------------
 
