@@ -17,11 +17,16 @@ class AlertView(BrowserView):
         """Check to see if any non filesystem directories have
         any items.
         """
-        stool = getToolByName(self.context, 'portal_skins')
-        skin_folders = stool.objectIds()
+        skins_tool = getToolByName(self.context, 'portal_skins')
+        # TODO: Verify that this works even when using something
+        #       like themetweaker.themeswitcher
+        default_skin = skins_tool.getDefaultSkin()
+        skin_path = skins_tool.getSkinPath(default_skin).split(',')
         # loop through all the skins dirs
-        for folder in skin_folders:
-            folder = stool[folder]
+        for path in skin_path:
+            folder = skins_tool.get(path, None)
+            if folder is None:
+                continue
             # only return true if it's not a fs dir and has something in it
             zope_folder = folder.meta_type != 'Filesystem Directory View'
             if zope_folder and folder.objectIds():
