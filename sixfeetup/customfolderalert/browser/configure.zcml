@@ -9,7 +9,7 @@
     for="*"
     name="alert_view"
     class="sixfeetup.customfolderalert.browser.alertview.AlertView"
-    allowed_interface="sixfeetup.customfolderalert.browser.interfaces.IAlertView"
+    allowed_attributes="check_for_evil is_alert_disabled"
     permission="zope.Public"
     />
 
