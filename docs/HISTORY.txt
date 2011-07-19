@@ -1,15 +1,28 @@
 Changelog
 =========
 
+1.0 (2011-02-15)
+----------------
+
+- Remove ``paster_plugins`` and ``setup_requires`` so that install does
+  not fail on Windows
+  [clayton]
+- Bump version to 1.0 as this has proven stable
+  [clayton]
+
 0.2 (2010-08-23)
 ----------------
 - added a version.txt file so it is read by portal_quickinstaller,
+  [lucie]
 - updated setup.py to read this new version.txt file,
+  [lucie]
 - updated configure.zcml so the egg is considered as a package,
+  [lucie]
 - removed old code from init.py
-- added a view class so we can test if the alert has been disabled by an environment variable
-  [lucielejard]
-
+  [lucie]
+- added a view class so we can test if the alert has been disabled by an
+  environment variable
+  [lucie]
 
 0.1 (2010-08-04)
 ----------------
